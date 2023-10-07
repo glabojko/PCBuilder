@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PCBuilder
 {
-    public class CPU : ElectricalComponent
+    public class RAM : ElectricalComponent
     {
-        private static CPU? instance;
-        public CPU(string name, int powerUsage) : base(name, powerUsage)
+        private static RAM? instance;
+        public RAM(string name, int powerUsage) : base(name, powerUsage)
         {
         }
 
-        public static CPU Instance
+        public static RAM Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new CPU("IntelCoreI5", -50);
+                    instance = new RAM("GoodRAM 32GB", -30);
                 }
                 return instance;
             }
