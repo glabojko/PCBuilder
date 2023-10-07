@@ -8,8 +8,8 @@ namespace PCBuilder
 {
     public class ElectricalComponent
     {
-        string Name { get; set; }
-        public int PowerUsage { get; set; }
+        string Name { get; }
+        public int PowerUsage { get; }
 
         public ElectricalComponent(string name, int powerUsage)
         {
