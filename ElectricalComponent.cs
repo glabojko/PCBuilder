@@ -9,12 +9,17 @@ namespace PCBuilder
     public class ElectricalComponent
     {
         string Name { get; set; }
-        int PowerUsage { get; set; }
+        public int PowerUsage { get; set; }
 
         public ElectricalComponent(string name, int powerUsage)
         {
             Name = name;
             PowerUsage = powerUsage;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}, {PowerUsage}";
         }
     }
 }

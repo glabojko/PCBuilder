@@ -14,16 +14,15 @@ namespace PCBuilder
         {
         }
 
-        public static CPU Instance
+        public static CPU Instance(string name, int powerUsage)
         {
-            get
-            {
+
                 if (instance == null)
                 {
-                    instance = new CPU("IntelCoreI5", -50);
+                    instance = new CPU(name, powerUsage);
                 }
                 return instance;
-            }
         }
+        
     }
 }

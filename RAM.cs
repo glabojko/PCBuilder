@@ -9,20 +9,26 @@ namespace PCBuilder
     public class RAM : ElectricalComponent
     {
         private static RAM? instance;
-        public RAM(string name, int powerUsage) : base(name, powerUsage)
+
+
+        private RAM(string name, int powerUsage) : base(name, powerUsage)
         {
         }
 
-        public static RAM Instance
+        public static RAM Instance(string name, int powerUsage)
         {
-            get
-            {
+            
+            
                 if (instance == null)
                 {
-                    instance = new RAM("GoodRAM 32GB", -30);
+                    instance = new RAM(name, powerUsage);
                 }
                 return instance;
-            }
+            
         }
+
+        
+
+
     }
 }
